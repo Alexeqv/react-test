@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import i18next from "i18next";
 // reactstrap components
 import {
-  Button,
   Collapse,
   DropdownToggle,
   DropdownMenu,
@@ -12,8 +11,6 @@ import {
   UncontrolledDropdown,
   NavbarBrand,
   Navbar,
-  NavItem,
-  NavLink,
   Nav,
   Container,
   Row,
@@ -59,11 +56,6 @@ export default function IndexNavbar() {
   };
   const onCollapseExited = () => {
     setCollapseOut("");
-  };
-  const scrollToDownload = () => {
-    document
-      .getElementById("download-section")
-      .scrollIntoView({ behavior: "smooth" });
   };
   return (
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="xs">

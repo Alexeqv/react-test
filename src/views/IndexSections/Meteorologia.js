@@ -10,23 +10,15 @@ import {
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
-  Badge,
   NavItem,
   NavLink,
   Nav,
-  Pagination,
-  PaginationItem,
-  PaginationLink,
-  FormGroup,
   Container,
   Row,
   Col,
   Card,
   CardHeader,
-  CardBody,
-  Spinner,
-  Button,
-  Label,
+  CardBody
 } from "reactstrap";
 
 
@@ -34,7 +26,7 @@ export default function Meteorologia() {
   const dispatch = useDispatch();
   const WeatherData = useSelector(getWeather); // Aqui vas a obtener la data
   React.useEffect(() => {
-    console.log('WeatherData', WeatherData)
+    // console.log('WeatherData', WeatherData)
   }, [WeatherData]);
   const { t } = useTranslation();
   const [select, setSelect] = useState({ label: t('select') });
@@ -56,15 +48,13 @@ export default function Meteorologia() {
     }
   ];
   const check = (city) => {
-    console.log('Check', city);
     const { lat, lon } = city
     dispatch(getWeatherData({
       lat,
       lon,
       units: 'metric',
       lang: localStorage.getItem("i18nextLng") || "en"
-    })) // esto es un ejemplo de como deberias enviar la latitud y longitud
-    // e.preventDefault()
+    }))
   }
   return (
     <div className="page-header header-filter">
