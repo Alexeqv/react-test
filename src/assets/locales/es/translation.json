@@ -1,0 +1,9 @@
+{
+  "weather_service": "Servicio Meteorológico",
+  "check_your_city": "Consulta tu ciudad",
+  "select": "Seleccione una ciudad",
+  "check": "Consultar",
+  "humidity": "Humedad",
+  "pressure": "Presión",
+  "wind": "Viento"
+}

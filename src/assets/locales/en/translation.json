@@ -1,0 +1,9 @@
+{
+  "weather_service": "Weather Service",
+  "check_your_city": "Check your city",
+  "select": "Select a city",
+  "check": "Check",
+  "humidity": "Humidity",
+  "pressure": "Pressure",
+  "wind": "Wind"
+}
