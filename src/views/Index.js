@@ -1,8 +1,8 @@
 import React from "react";
 
-// core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import Footer from "components/Footer/Footer.js";
+// core ../components
+import IndexNavbar from "../components/Navbars/IndexNavbar.js";
+import Footer from "../components/Footer/Footer.js";
 
 // sections for this page/view
 import Meteorologia from "views/IndexSections/Meteorologia.js";

@@ -112,10 +112,10 @@ export default function IndexNavbar() {
               nav
               // onClick={(e) => e.preventDefault()}
             >
-              <i
+              {/* <i
                 aria-hidden={true}
                 className="tim-icons icon-settings-gear-63"
-              />{languageMap[selected].short}
+              />{languageMap[selected].short} */}
             </DropdownToggle>
             <DropdownMenu
               aria-labelledby="navbarDropdownMenuLink"

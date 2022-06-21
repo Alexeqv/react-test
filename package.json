@@ -2,6 +2,13 @@
   "name": "react-test",
   "version": "1.2.0",
   "description": "React test",
+  "jest": {
+    "verbose": true,
+    "testEnvironmentOptions": {
+      "url": "http://localhost/"
+    },
+    "testEnvironment": "node"
+  },
   "main": "index.js",
   "author": "Creative Tim",
   "license": "MIT",
@@ -32,8 +39,8 @@
     "blk-design-system-react"
   ],
   "dependencies": {
-    "@testing-library/jest-dom": "5.11.6",
-    "@testing-library/react": "11.2.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
     "@testing-library/user-event": "12.2.2",
     "axios": "^0.27.2",
     "bootstrap": "4.5.3",
@@ -45,6 +52,7 @@
     "i18next-browser-languagedetector": "^6.1.4",
     "i18next-http-backend": "^1.4.1",
     "moment": "2.29.1",
+    "msw": "^0.42.1",
     "node-sass": "4.14.1",
     "node-sass-package-importer": "5.3.2",
     "nouislider": "14.6.3",
@@ -69,7 +77,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
-    "test": "react-scripts test",
+    "test": "jest --env=jsdom",
+    "test:watch": "npm test -- --watch",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/assets/scss/blk-design-system-react.scss src/assets/css/blk-design-system-react.css",
@@ -93,5 +102,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.7",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1"
   }
 }
