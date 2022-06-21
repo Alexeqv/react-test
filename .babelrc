@@ -1,3 +1,37 @@
 {
-    "presets": ["@babel/preset-react", "@babel/preset-env"]
+    "plugins": ["@babel/syntax-dynamic-import", "@babel/transform-runtime"],
+   /*  "presets": [
+        "@babel/preset-react",
+        "@babel/preset-env",
+        "@babel/preset-es2015"
+       [
+        "es2015",
+        {
+          "modules": true
+        }
+      ],
+      "react",
+      "stage-0" 
+    ], */
+    "presets": [
+        "@babel/preset-react", 
+        "@babel/preset-env", 
+        // "@babel/preset-es2015", 
+        // "es2015",
+        // "@babel/preset-stage-0",
+    ]
+    /* "env": {
+      "start": {
+        "presets": [
+          "react-hmre"
+        ]
+      },
+      "test": {
+        "presets": ["es2015", "react", "stage-0"]
+      }
+    } */
+  }
+  /* {
+    "presets": ["@babel/preset-react", "@babel/preset-env", "@babel/preset-es2015"]
 }
+ */

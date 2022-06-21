@@ -2,6 +2,7 @@ import React from 'react'
 import { rest } from 'msw'
 import { render, fireEvent, screen } from './test-utils'
 import Index from '../../views/Index'
+import Meteorologia from "views/IndexSections/Meteorologia.js";
 
 export const handlers = [
   rest.get('/api/user', (req, res, ctx) => {
